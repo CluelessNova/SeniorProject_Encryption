@@ -81,70 +81,106 @@ import random
 
 
 # The Encryption Function
-def cipher_encrypt(plain_text, key):
-    encrypted = ""
+# def cipher_encrypt(plain_text, key):
+#     encrypted = ""
 
-    for c in plain_text:
+#     for c in plain_text:
 
-        if c.isupper(): #check if it's an uppercase character
-            c_index = ord(c) - ord('A')
-            # shift the current character by key positions
-            c_shifted = (c_index + key) % 26 + ord('A')
-            c_new = chr(c_shifted)
-            encrypted += c_new
-        elif c.islower(): #check if its a lowecase character
-            # subtract the unicode of 'a' to get index in [0-25) range
-            c_index = ord(c) - ord('a') 
-            c_shifted = (c_index + key) % 26 + ord('a')
-            c_new = chr(c_shifted)
-            encrypted += c_new
-        elif c.isdigit():
-            # if it's a number,shift its actual value 
-            c_new = (int(c) + key) % 10
-            encrypted += str(c_new)
-        else:
-            # if its neither alphabetical nor a number, just leave it like that
-            encrypted += c
+#         if c.isupper(): #check if it's an uppercase character
+#             c_index = ord(c) - ord('A')
+#             # shift the current character by key positions
+#             c_shifted = (c_index + key) % 26 + ord('A')
+#             c_new = chr(c_shifted)
+#             encrypted += c_new
+#         elif c.islower(): #check if its a lowecase character
+#             # subtract the unicode of 'a' to get index in [0-25) range
+#             c_index = ord(c) - ord('a') 
+#             c_shifted = (c_index + key) % 26 + ord('a')
+#             c_new = chr(c_shifted)
+#             encrypted += c_new
+#         elif c.isdigit():
+#             # if it's a number,shift its actual value 
+#             c_new = (int(c) + key) % 10
+#             encrypted += str(c_new)
+#         else:
+#             # if its neither alphabetical nor a number, just leave it like that
+#             encrypted += c
 
-    return encrypted
+#     return encrypted
 
-# The Decryption Function
-def cipher_decrypt(ciphertext, key):
-    decrypted = ""
+# # The Decryption Function
+# def cipher_decrypt(ciphertext, key):
+#     decrypted = ""
 
-    for c in ciphertext:
-        if c.isupper(): 
-            c_index = ord(c) - ord('A')
-            # shift the current character to left by key positions to get its original position
-            c_og_pos = (c_index - key) % 26 + ord('A')
-            c_og = chr(c_og_pos)
-            decrypted += c_og
-        elif c.islower(): 
-            c_index = ord(c) - ord('a') 
-            c_og_pos = (c_index - key) % 26 + ord('a')
-            c_og = chr(c_og_pos)
-            decrypted += c_og
-        elif c.isdigit():
-            # if it's a number,shift its actual value 
-            c_og = (int(c) - key) % 10
-            decrypted += str(c_og)
-        else:
-            # if its neither alphabetical nor a number, just leave it like that
-            decrypted += c
+#     for c in ciphertext:
+#         if c.isupper(): 
+#             c_index = ord(c) - ord('A')
+#             # shift the current character to left by key positions to get its original position
+#             c_og_pos = (c_index - key) % 26 + ord('A')
+#             c_og = chr(c_og_pos)
+#             decrypted += c_og
+#         elif c.islower(): 
+#             c_index = ord(c) - ord('a') 
+#             c_og_pos = (c_index - key) % 26 + ord('a')
+#             c_og = chr(c_og_pos)
+#             decrypted += c_og
+#         elif c.isdigit():
+#             # if it's a number,shift its actual value 
+#             c_og = (int(c) - key) % 10
+#             decrypted += str(c_og)
+#         else:
+#             # if its neither alphabetical nor a number, just leave it like that
+#             decrypted += c
 
-    return decrypted
+#     return decrypted
 
-plain_text = "Mate, the adventure ride in Canberra was so much fun, We were so drunk we ended up calling 911!"
-ciphertext = cipher_encrypt(plain_text, 2)
-print("Plain text message:\n", plain_text)
-print("Encrypted ciphertext:\n", ciphertext)
-print(" ")
-ciphertext = "Qexi, xli ehzirxyvi vmhi mr Gerfivve aew ws qygl jyr, Ai aivi ws hvyro ai irhih yt geppmrk 355!"
-decrypted_msg = cipher_decrypt(ciphertext, 4)
-print("The cipher text:\n", ciphertext)
-print("The decrypted message is:\n",decrypted_msg)
-print(" ")
-ciphertext = "Sr xli gsyrx sj 7, 6, 5 - Ezirkivw Ewwiqfpi!"
-decrypted_msg = cipher_decrypt(ciphertext, 4)
-print("The cipher text:\n", ciphertext)
-print("The decrypted message is:\n",decrypted_msg)
+# plain_text = "Mate, the adventure ride in Canberra was so much fun, We were so drunk we ended up calling 911!"
+# ciphertext = cipher_encrypt(plain_text, 2)
+# print("Plain text message:\n", plain_text)
+# print("Encrypted ciphertext:\n", ciphertext)
+# print(" ")
+# ciphertext = "Qexi, xli ehzirxyvi vmhi mr Gerfivve aew ws qygl jyr, Ai aivi ws hvyro ai irhih yt geppmrk 355!"
+# decrypted_msg = cipher_decrypt(ciphertext, 4)
+# print("The cipher text:\n", ciphertext)
+# print("The decrypted message is:\n",decrypted_msg)
+# print(" ")
+# ciphertext = "Sr xli gsyrx sj 7, 6, 5 - Ezirkivw Ewwiqfpi!"
+# decrypted_msg = cipher_decrypt(ciphertext, 4)
+# print("The cipher text:\n", ciphertext)
+# print("The decrypted message is:\n",decrypted_msg)
+
+
+
+
+
+# import module
+import codecs
+  
+# to open/create a new html file in the write mode
+f = open('GFG.html', 'w')
+  
+# the html code which will go in the file GFG.html
+html_template = """
+<html>
+<head></head>
+<body>
+<p>Hello World! </p>
+  
+</body>
+</html>
+"""
+  
+# writing the code into the file
+f.write(html_template)
+  
+# close the file
+f.close()
+  
+# viewing html files
+# below code creates a 
+# codecs.StreamReaderWriter object
+file = codecs.open("GFG.html", 'r', "utf-8")
+  
+# using .read method to view the html 
+# code from our object
+print(file.read())

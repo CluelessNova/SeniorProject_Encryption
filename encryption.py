@@ -12,11 +12,12 @@ class encryption:
         self.secureness = secureness
         i = 0
         while i < self.secureness:
-            x = random.randint(1,9)
+            x = random.randint(1,25)
 
             self.key.append(x)
             i += 1
         # print("Your key has been generated!")
+        return self.key
        
 
     def displayKey(self):
