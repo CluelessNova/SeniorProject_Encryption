@@ -1,3 +1,5 @@
+from encryption import encryption
+from encryption import decryption
 
 encrypt = encryption()
 decrypt = decryption()
