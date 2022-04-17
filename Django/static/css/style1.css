@@ -1,0 +1,193 @@
+body {
+    background-color: salmon;
+    color: white;
+}
+
+header {
+    background-color: red;
+    /* border: solid black 3px; */
+    height: 80px;
+    text-align: center; 
+    font-size: 50px;
+}
+
+#nav {
+    /* border: solid black 3px; */ 
+    align-self: center;
+    justify-content: space-around;
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    height: 80px;
+}
+.navButton {
+    text-align: center;
+    border-radius: 25px;
+    background-color: aqua;
+    border: solid black 2px;
+    padding: 10px 60px;
+    margin: 10px 20px;
+    color:black;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.navButton:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Encrypt Page */
+#key {
+    /* border: solid black 1px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#displayKey {
+    border: solid black 3px;
+    width: 35%;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+
+/* #Message {
+    border: solid black 1px;
+   
+} */
+#KeyEncryptMessage{
+    /* border: solid black 1px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#orignalMessageInput {
+    border: solid black 3px;
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    color: black;
+    resize: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+/* #originalMessage {
+    border:solid black 5px;
+    margin: auto; 
+} */
+#inputKey {
+    border: solid black 3px;
+    width: 300%;
+    height: 30px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
+#encryptedMessage{
+    border: solid black 3px;
+    width: 75%;
+    height: 100px;
+    margin: auto;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+.encryptContent {
+    padding: 10px;
+}
+.encryptionButtons {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+#everythingEncrypt{
+    /* border: solid black 1px; */
+    padding: 50px;
+}
+#keySecureness{
+    width: 55px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0);
+    border: solid black 2px;
+}
+
+#keySecurenessLabel {
+    color: black;
+    font-size: 20px;
+}
+
+/* End of Encrypt Page */ 
+
+/* Decrypt Page */
+#encryptedMessageInputDiv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#encryptedMessageInput{
+    border: solid black 3px;
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    font-size: 20px;
+}
+
+#keyInputDecrypt {
+    /* border: solid black 1px; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#decryptKey {
+    border: solid black 3px;
+    /* padding: 10px 20px; */
+    font-size: 20px;
+    width: 200%;
+    height: 30px;
+    background-color: white;
+    color: black;
+}
+
+#decryptedMessage {
+    border: solid black 3px;
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    color: black;
+    margin: auto;
+    font-size: 20px;
+}
+#decryptButton {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+.decryptContent {
+    /* border: solid black 1px; */
+    padding: 20px;
+}
+
+#everythingDecrypt{
+    /* border: solid black 1px; */
+    padding: 50px;
+}
+
+/* Thesis Page */
+#thesisPaper {
+    width: 50%;
+    height: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
