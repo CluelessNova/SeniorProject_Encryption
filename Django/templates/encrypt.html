@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
 <title>Django Senior Project</title>
@@ -8,6 +9,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="{% static 'js/script3.js' %}"></script>
 </head>
 <body>
 
@@ -15,10 +19,10 @@
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Encrypt</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Decrypt</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Thesis</a>
+    <a href="{% url 'index' %}" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="{% url 'encrypt' %}" class="w3-bar-item w3-button w3-padding-large">Encrypt</a>
+    <a href="{% url 'decrypt' %}" class="w3-bar-item w3-button w3-padding-large">Decrypt</a>
+    <a href="{% url 'thesis' %}" class="w3-bar-item w3-button w3-padding-large">Thesis</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -35,7 +39,7 @@
 </header>
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+{% comment %} <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
       <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
@@ -49,6 +53,46 @@
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
+  </div>
+</div> {% endcomment %}
+
+<!-- My encrpytion -->
+<div id="everythingEncrypt">
+  <div id="Key" class="encryptContent">
+      <div id="keyLength">
+          <label for="keySecurenessLevel" id="keySecurenessLabel">How strong is the key? <br>(slide or
+              type)</label><br>
+          <input type="range" id="keySecurenessLevel" min="1" max="26" onchange="updateKeyInput(this.value)"
+              value="1">
+          <input type="number" id="keySecureness" min="1" max="26" value="1"
+              onchange="updateRangeInput(this.value)">
+      </div>
+     
+      <div id="generateKey">
+          <button class="encryptionButtons" onclick="buttonClick()">generateKey</button>
+      </div>
+      <div id="displayKey">
+          
+      </div>
+    </div>
+      
+  </div>
+
+  <div id="Message" class="encryptContent">
+      <div id="originalMessage">
+          <textarea id="orignalMessageInput" placeholder="Write your message here"></textarea>
+          <div id="KeyEncryptMessage" class="encryptContent">
+              <div>
+                  <input type="text" id="inputKey" placeholder="Put your encryption key here">
+              </div>
+              <div id="encryptButton">
+                  <button class="encryptionButtons" onclick="encrypt()">Encrypt</button>
+              </div>
+          </div>
+          <div id="encryptedMessage">
+              Encrypted message will go here
+          </div>
+      </div>
   </div>
 </div>
 

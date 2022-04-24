@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
+from . import views, settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
-] 
+    path('encrypt', views.encrypt, name="encrypt" ),
+    path('decrypt', views.decrypt, name="decrypt" ),
+    path('thesis', views.thesis, name="thesis" ),
+    path('hello/', views.printHelloInConsole, name="hello"),
+    path('encryptMess/', views.encryptMess, name="encryptMess"),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-urlpatterns += staticfiles_urlpatterns()
 
