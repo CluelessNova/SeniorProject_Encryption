@@ -7,7 +7,6 @@ class encryption:
         self.secureness = 0
         self.encryptMessage = ""
 
-
     #create a key that will be used for the ecnryption
     def generateKey(self, secureness):
         self.secureness = secureness

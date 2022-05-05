@@ -1,31 +1,32 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-from . import hello, encryption
+from django.http import HttpResponse
+from . import encryptCode
 
 def index(request):
     return render(request, 'index.html', {})
 
-def encrypt(request):
-    # return HTTPResponse('encrypt')
-    return render(request, 'encrypt.html')
-
 def decrypt(request):
-    # return HTTPResponse('encrypt')
-    return render(request, 'decrypt.html')
+    return render(request, 'decrypt.html', {})
 
+def encrypt(request):
+    return render(request, 'encrypt.html', {})
 
 def thesis(request):
-    # return HTTPResponse('encrypt')
-    return render(request, 'thesis.html')
+    return render(request, 'thesis.html', {})
 
-
-def printHelloInConsole(request):
-
-    result = hello.key(request.GET.get('num', '0'))
+def genKey(request):
+    result = encryptCode.key(request.GET.get('num', '0'))
     return HttpResponse(result)
 
 def encryptMess(request):
     mess = request.GET.get('mess', '')
     key = request.GET.get('key', '1')
-    result = hello.encryptMess(key, mess)
+    result = encryptCode.encryptMess(key, mess)
     return HttpResponse(result)
+
+def decryptMess(request):
+    mess = request.GET.get('mess', '')
+    key = request.GET.get('key', '1')
+    result = encryptCode.decryptMess(key, mess)
+    return HttpResponse(result)
+

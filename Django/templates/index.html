@@ -2,31 +2,32 @@
 {% load static %}
 <html lang="en">
 <head>
-<title>Django Senior Project</title>
+<title>Senior Project</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=PT+Serif&family=Playfair+Display+SC&family=Tinos&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script src="{% static 'js/script1.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </head>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+  <div class="w3-bar nav w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="{% url 'index' %}" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="{% url 'index' %}" class="active w3-bar-item w3-button w3-padding-large">Home</a>
     <a href="{% url 'encrypt' %}" class="w3-bar-item w3-button w3-padding-large">Encrypt</a>
     <a href="{% url 'decrypt' %}" class="w3-bar-item w3-button w3-padding-large">Decrypt</a>
     <a href="{% url 'thesis' %}" class="w3-bar-item w3-button w3-padding-large">Thesis</a>
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  <div id="navDemo" class="w3-bar-block nav w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="{% url 'encrypt' %}" class="w3-bar-item w3-button w3-padding-large">Encrypt</a>
     <a href="{% url 'decrypt' %}" class="w3-bar-item w3-button w3-padding-large">Decrypt</a>
     <a href="{% url 'thesis' %}" class="w3-bar-item w3-button w3-padding-large">Thesis</a>
@@ -34,42 +35,71 @@
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<header class="w3-container w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">Jacob Levinky's Senior Project</h1>
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-padding-64 w3-container descriptionText">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h2 class="descriptionText">What is my project about?</h2>
+      <p class="w3-padding-32 descriptionText">
+        My Senior Project is about encryption and this website is for showing off my work. My encryption works by implementing the ceasar cipher to encrypt the message. It takes in a key 
+        to shift each letter of the alphabet and mix up the message.  
+      </p>
+      <p>
+        The ceasar cipher takes the alphabet and shifts it a certain amount. The key has a range between 1 and 25, the amount the letters get shifts, so if it the letter is 'A' and the shift key is 
+        4, the new letter from the ceasar cipher is 'E'. The length of the key is the secureness level, and the enryption will cycle through the key and shift the message according. 
+      </p>
     </div>
 
-    <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-    </div>
   </div>
 </div>
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container descriptionText">
   <div class="w3-content">
-    <div class="w3-third w3-center">
-      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
-    </div>
-
     <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+      <h2 class="descriptionText">How to use the website</h2>
+      <h3 class="w3-padding-32 descriptionText">
+        The encrypt page
+      </h3>
 
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="w3-text-grey">
+        <ol>
+          <li>Generate a key</li>
+            <ul>
+              <li>Use the slider or input a number to change the secureness of the key</li>
+              <li>The key secureness is the length of the key (how many numbers are in the key)</li>
+          </ul>
+          <li>Write your message in the top box</li>
+          <li>Input the key</li>
+          <ul>
+            <li>The key must look equivalent as it was generated</li>
+            <li>It must have spaces inbetween each other number</li>
+          </ul>
+          <li>The encrypted message will be printed at the bottom</li>
+        </ol>
+      </ol>
+      </p>
+      </div>
+
+      <div class="w3-twothird">
+      <h3 class="w3-padding-32 descriptionText">
+        The decrypt page 
+      </h3>
+      <p class="w3-text-grey">
+        <ol>
+          <li>Write the encrypted message in the top box</li>
+          <li>Input the same key that was used to encrypt the original message</li>
+          <ul>
+            <li>The key must look equivalent as it was generated</li>
+            <li>It must have spaces inbetween each other number</li>
+          </ul>
+          <li>The decrypted message will be printed at the bottom</li>
+        </ol>
+      </p>
     </div>
   </div>
 </div>
