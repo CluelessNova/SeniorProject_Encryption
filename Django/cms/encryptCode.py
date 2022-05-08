@@ -1,4 +1,5 @@
-import random
+from email.mime import base
+import random, base64
 
 
 def printHello(num):
@@ -25,8 +26,8 @@ def encryptMess(key, message):
     
     keyInput = key.split(' ')
     shiftKey = list(map(int, keyInput))
-    print(shiftKey)
-    print(message)
+    # print(shiftKey)
+    # print(message)
 
     for char in message:
         if char.isupper(): #check if it's an uppercase character
@@ -57,17 +58,25 @@ def encryptMess(key, message):
         else:
             # if its neither alphabetical nor a number, just leave it like that
             encrypted += char
-    return encrypted
+    messageBytes = encrypted.encode('ascii')
+    base64Bytes= base64.b64encode(messageBytes)
+    encrytpedMessage = base64Bytes.decode('ascii')
+    return encrytpedMessage
+    
 
 def decryptMess(key, encMess):
     decrypted = ""
-    print(key)
-    print(encMess)
+    # print(key)
+    # print(encMess)
+
+    base64Bytes = encMess.encode('ascii')
+    messageBytes = base64.b64decode(base64Bytes)
+    message = messageBytes.decode('ascii')
     keyInput = key.split(' ')
     shiftKey = list(map(int, keyInput))
     i = 0
 
-    for char in encMess:
+    for char in message:
         if char.isupper(): 
             if i >= len(shiftKey):
                i = 0
