@@ -6,4 +6,4 @@ services:
     command: python manage.py runserver 0.0.0.0:80
     ports:
       - "80:80"
-    image: cluelessnova/django_web_final:version3
+    image: cluelessnova/django_web_final:version4

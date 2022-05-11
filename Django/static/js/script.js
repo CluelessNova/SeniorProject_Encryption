@@ -29,3 +29,15 @@ function decrypt(){
       $('#decryptedMessage').text(data);
       });
   }
+
+function downloadKey(){
+  window.location.href='data:application/txt, '+ encodeURIComponent($('#displayKey').html())
+}
+
+function copyKey() {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($('#displayKey').text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
