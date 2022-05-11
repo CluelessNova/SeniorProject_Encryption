@@ -31,13 +31,13 @@ function decrypt(){
   }
 
 function downloadKey(){
-  window.location.href='data:application/txt, '+ encodeURIComponent($('#displayKey').html())
+  window.location.href='data:application/txt,'+ encodeURIComponent($.trim($('#displayKey').html()))
 }
 
 function copyKey() {
   var $temp = $("<input>");
   $("body").append($temp);
-  $temp.val($('#displayKey').text()).select();
+  $temp.val($.trim($('#displayKey').text())).select();
   document.execCommand("copy");
   $temp.remove();
 }
