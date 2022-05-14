@@ -41,3 +41,7 @@ function copyKey() {
   document.execCommand("copy");
   $temp.remove();
 }
+
+function downloadMessage(){
+  window.location.href='data:application/txt,'+ encodeURIComponent($.trim($('#encryptedMessage').html()))
+}

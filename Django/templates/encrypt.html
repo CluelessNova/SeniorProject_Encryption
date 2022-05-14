@@ -57,12 +57,10 @@
       </div>
       <div id="displayKeyDiv" class="text">
           <span id="displayKey"> Your Key Will Go Here</span>
-      </div>
-      <div id="downloadKey">
-        <button onclick="downloadKey()">Download</button>
-      </div>
-      <div id="copyKey">
-        <button onclick="copyKey()">Copy</button>
+          <div id="keyButtons">
+          <button id="copyKeyButton" onclick="copyKey()">Copy</button>
+          <button id="downloadKeyButton" onclick="downloadKey()">Download</button>
+          </div>
       </div>
     </div>
       
@@ -82,6 +80,10 @@
           <div id="encryptedMessage">
               Encrypted message will go here
           </div>
+          <div id="messButton">
+            <button id="downloadMessageButton" onclick="downloadMessage()">Download</button>
+          </div>
+
       </div>
   </div>
 </div>

@@ -136,6 +136,7 @@ h1{
 .encryptContent {
     padding: 10px;
 }
+
 .encryptionButtons {
     position: relative;
     font-family: 'Arsenal', sans-serif;
@@ -205,6 +206,147 @@ h1{
 #keySecurenessLabel {
     color: white;
     font-size: 20px;
+}
+
+#copyKeyButton {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 20px 50px;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#copyKeyButton:hover{
+    /* background-color: #313E44; */
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;;
+    }
+}
+
+#copyKeyButton::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+#copyKeyButton:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#downloadKeyButton {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 20px 50px;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#downloadKeyButton:hover{
+    /* background-color: #313E44; */
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;;
+    }
+}
+
+#downloadKeyButton::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+#downloadKeyButton:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#downloadMessageButton {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 20px 50px;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#downloadMessageButton:hover{
+    /* background-color: #313E44; */
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;;
+    }
+}
+
+#downloadMessageButton::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+#downloadMessageButton:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
 }
 
 /* End of Encrypt Page */ 
