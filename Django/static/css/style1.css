@@ -1,0 +1,487 @@
+body {
+    background-color: #0B307E;
+    color: white;
+}
+
+header {
+    background-color: #132B5F;
+    /* border: solid black 3px; */
+    height: 80px;
+    text-align: center; 
+    font-size: 50px;
+}
+
+h1{
+    font-family: 'Playfair Display SC', serif;
+}
+
+.nav {
+    /* border: solid black 3px; */ 
+    /* align-self: center;
+    justify-content: space-around;
+    display: flex; */
+    background-color: #010D28;
+    font-family: 'Playfair Display SC', serif;
+    /* align-items: center;
+    height: 80px; */
+}
+.navButton {
+    /* text-align: center;
+    border-radius: 25px;
+    background-color: aqua;
+    border: solid black 2px;
+    padding: 10px 60px;
+    margin: 10px 20px;
+    color:black;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .4s; */
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    color:white;
+    position: relative;
+}
+
+.navButton:hover::after {
+    /* color: white; */
+    transform: scaleX(1);
+    /* background-color: black; */
+}
+.navButton::after{
+    content: '';
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.active {
+    background-color: white;
+    color: black;
+}
+
+/* Encrypt Page */
+#key {
+    /* border: solid black 1px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#displayKey {
+    border: solid black 3px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    width: 35%;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+
+/* #Message {
+    border: solid black 1px;
+   
+} */
+#KeyEncryptMessage{
+    /* border: solid black 1px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#orignalMessageInput {
+    border: solid black 3px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    color: black;
+    resize: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+/* #originalMessage {
+    border:solid black 5px;
+    margin: auto; 
+} */
+#inputKey {
+    border: solid black 3px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 200%;
+    height: 30px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
+#encryptedMessage{
+    border: solid black 3px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 75%;
+    height: 100px;
+    margin: auto;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+.encryptContent {
+    padding: 10px;
+}
+
+.encryptionButtons {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    width: 240px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 20px 50px;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.encryptionButtons:hover{
+    /* background-color: #313E44; */
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;;
+    }
+}
+
+.encryptionButtons::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.encryptionButtons:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#keyLength{
+    background-color: #343181;
+    border: solid black 3px;
+    padding: 10px;
+    font-family: 'Arsenal', sans-serif;
+}
+
+#everythingEncrypt{
+    /* border: solid black 1px; */
+    padding: 50px;
+}
+#keySecureness{
+    color: white;
+    width: 60px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0);
+    /* border: solid white 2px; */
+}
+
+#keySecurenessLabel {
+    color: white;
+    font-size: 20px;
+}
+
+#copyKeyButton {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#copyKeyButton:hover{
+    /* background-color: #313E44; */
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;;
+    }
+}
+
+#copyKeyButton::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+#copyKeyButton:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#downloadKeyButton {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#downloadKeyButton:hover{
+    /* background-color: #313E44; */
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;;
+    }
+}
+
+#downloadKeyButton::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+#downloadKeyButton:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#downloadMessageButton {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#downloadMessageButton:hover{
+    /* background-color: #313E44; */
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;;
+    }
+}
+
+#downloadMessageButton::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+#downloadMessageButton:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#keyButtons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-items: baseline;
+}
+
+#messButton {
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+}
+/* End of Encrypt Page */ 
+
+/* Decrypt Page */
+#encryptedMessageInputDiv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#encryptedMessageInput{
+    border: solid black 3px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    font-size: 20px;
+}
+
+#keyInputDecrypt {
+    /* border: solid black 1px; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#decryptKey {
+    border: solid black 3px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+    font-size: 20px;
+    width: 200%;
+    height: 30px;
+    background-color: white;
+    color: black;
+}
+
+#decryptedMessage {
+    border: solid black 3px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    color: black;
+    margin: auto;
+    font-size: 20px;
+}
+#decryptButton {
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    width: 240px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 20px 50px;
+    background-color: #041029;
+    border: 3px solid #373491;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#decryptButton:hover{
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0% {
+        box-shadow: 
+        0 0 25px #16232B,
+        0 0 50px #312F6E;
+    }
+}
+#decryptButton::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+#decryptButton:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+.decryptContent {
+    /* border: solid black 1px; */
+    padding: 20px;
+}
+
+#everythingDecrypt{
+    /* border: solid black 1px; */
+    padding: 50px;
+}
+
+/* Thesis Page */
+#thesisPaper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Index Page */
+
+.descriptionText {
+    font-family: 'Tinos', serif;
+}
+
+/* Generall CSS  */
+
+.text {
+    font-family: 'PT Serif', serif;
+}
