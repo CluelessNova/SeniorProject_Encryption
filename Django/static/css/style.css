@@ -211,13 +211,13 @@ h1{
 #copyKeyButton {
     position: relative;
     font-family: 'Arsenal', sans-serif;
-    font-size: 10px;
+    font-size: 20px;
+    padding: 5px;
     text-align: center;
     width: 100px;
     display: inline-block;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 20px 50px;
     background-color: #041029;
     border: 3px solid #373491;
     border-radius: 10px;
@@ -258,13 +258,13 @@ h1{
 #downloadKeyButton {
     position: relative;
     font-family: 'Arsenal', sans-serif;
-    font-size: 10px;
+    font-size: 20px;
+    padding: 5px;
     text-align: center;
     width: 100px;
     display: inline-block;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 20px 50px;
     background-color: #041029;
     border: 3px solid #373491;
     border-radius: 10px;
@@ -305,13 +305,13 @@ h1{
 #downloadMessageButton {
     position: relative;
     font-family: 'Arsenal', sans-serif;
-    font-size: 10px;
+    font-size: 20px;
+    padding: 5px;
     text-align: center;
     width: 100px;
     display: inline-block;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 20px 50px;
     background-color: #041029;
     border: 3px solid #373491;
     border-radius: 10px;
@@ -349,6 +349,18 @@ h1{
     transition: 0s;
 }
 
+#keyButtons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-items: baseline;
+}
+
+#messButton {
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+}
 /* End of Encrypt Page */ 
 
 /* Decrypt Page */
