@@ -492,17 +492,34 @@ h1{
 
 
 /* Mobile Responsive */
+@media screen and (max-width:1270px){
+    #displayKey {
+        font-size: 15px;
+    }
+}
 
-@media screen and (max-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+@media screen and (max-width:1090px) { /* big landscape tablets, laptops, and desktops */ 
+    .header {
+        font-size: 45px;
+    }
+
+    #displayKey {
+        font-size: 13px;
+    }
+}
+
+
+
+@media screen and (max-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
 
 }
 
-@media screen and (max-width:340px) {
+
+@media screen and (max-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
     .header {
         font-size: 30px;
     }
 }
-
 
 @media screen and (max-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
     #keyLength {
@@ -521,33 +538,24 @@ h1{
         width:100%;
         margin:10px;
     }
-}
-
-
-@media screen and (max-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
     .header {
         font-size: 30px;
     }
 }
 
-
-@media screen and (max-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-
-}
-
-
-@media screen and (max-width:1090px) { /* big landscape tablets, laptops, and desktops */ 
+@media screen and (max-width:340px) {
     .header {
-        font-size: 45px;
-    }
-
-    #displayKey {
-        font-size: 13px;
+        font-size: 30px;
     }
 }
 
-@media screen and (max-width:1270px){
-    #displayKey {
-        font-size: 15px;
-    }
+@media screen and (max-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+
 }
+
+
+
+
+
+
+
