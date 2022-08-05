@@ -71,6 +71,7 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #displayKey {
@@ -92,6 +93,7 @@ h1{
     /* border: solid black 1px; */
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 #orignalMessageInput {
@@ -388,6 +390,7 @@ h1{
     /* border: solid black 1px; */
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #decryptKey {
@@ -484,4 +487,67 @@ h1{
 
 .text {
     font-family: 'PT Serif', serif;
+}
+
+
+
+/* Mobile Responsive */
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+
+}
+
+@media (min-width:340px) {
+    .header {
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+    #keyLength {
+        margin: 10px;
+    }
+    #generateKey {
+        margin: 10px;
+    }
+    #displayKeyDiv {
+        margin: 10px;
+    }
+    #inputKey {
+        width:100%;
+    }
+    #decryptKey{
+        width:100%;
+        margin:10px;
+    }
+}
+
+
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .header {
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+}
+
+
+@media (min-width:1090px) { /* big landscape tablets, laptops, and desktops */ 
+    .header {
+        font-size: 45px;
+    }
+
+    #displayKey {
+        font-size: 13px;
+    }
+}
+
+@media (min-width:1270px){
+    #displayKey {
+        font-size: 15px;
+    }
 }
